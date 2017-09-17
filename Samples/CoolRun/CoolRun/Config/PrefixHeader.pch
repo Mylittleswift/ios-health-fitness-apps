@@ -1,0 +1,48 @@
+//
+//  PrefixHeader.pch
+//  CoolRun
+//
+//  Created by 蔡欣东 on 16/5/20.
+//  Copyright © 2016年 蔡欣东. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+
+#import <CoreLocation/CoreLocation.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <MapKit/MapKit.h>
+#import "MathController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "JVFloatingDrawerAnimation.h"
+#import "AppDelegate.h"
+#import "JVFloatingDrawerSpringAnimator.h"
+#import "RecordManager.h"
+#import <CoreMotion/CoreMotion.h>
+#import <HealthKit/HealthKit.h>
+#import "HealthKitManager.h"
+#import "ActionSheetDatePicker.h"
+#import "ActionSheetStringPicker.h"
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "XDNetworking.h"
+#import "MBProgressHUD.h"
+#import "Utils.h"
+#import "MyUserDefault.h"
+#import "UIImageView+WebCache.h"
+#import "Config.h"
+#import "FBKVOController.h"
+#import "UserStatusManager.h"
+#import "XDRefresh.h"
+#import "NSDate+week.h"
+#import "CoreDataManager.h"
+#import "Macros.h"
+#import "UserModel.h"
+#import "XDBaseViewController.h"
+#endif /* PrefixHeader_pch */
