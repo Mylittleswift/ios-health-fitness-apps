@@ -3,12 +3,8 @@ iPhone and Apple watch Health and Fitness Sample APP using healthkit <br >
 Apple Healthkit: (Swift) https://developer.apple.com/documentation/healthkit <br >
 (Objective-C) https://developer.apple.com/documentation/healthkit?language=objc
 
-Open-source Apps:
+## Open-source Apps:
 
-## Health 
- 
-[back to top](#readme) 
- 
 - Abby's Cycle: Menstrual cycle tracker  
   <details><summary><code>swift</code> </summary>
 
@@ -64,10 +60,6 @@ Open-source Apps:
   </details>
 
 
-### Fitness 
- 
-[back to top](#readme) 
- 
 - Jim: Track your gym workouts  
   <details><summary><code>swift</code> <code>parse</code> </summary>
 
