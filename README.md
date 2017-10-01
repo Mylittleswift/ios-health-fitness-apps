@@ -1,8 +1,8 @@
 <img src="https://github.com/Telerik-Verified-Plugins/HealthKit/blob/master/img/healthkit-hero_2x.png">
 
 ## Apple Healthkit: 
-(Swift) https://developer.apple.com/documentation/healthkit <br >
-(Objective-C) https://developer.apple.com/documentation/healthkit?language=objc
+Programming Guide (Swift): https://developer.apple.com/documentation/healthkit <br >
+Programming Guide (Objective-C): https://developer.apple.com/documentation/healthkit?language=objc
 ## Apple Carekit
 Open-source project: https://github.com/carekit-apple/CareKit <br >
 Programming Guide: http://carekit.org/docs/docs/Overview/Overview.html 
