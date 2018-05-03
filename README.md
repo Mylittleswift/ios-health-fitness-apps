@@ -11,8 +11,8 @@ Open-source project: https://github.com/ResearchKit/ResearchKit <br >
 Programming Guide: http://researchkit.org/docs/docs/Overview/GuideOverview.html
 
 ## Most-Porpular Apps in App Store:
-### Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
-### Top paid: Apps:https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-paid/iphone
+Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
+Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-paid/iphone
 
 ## Open-source apps
 
@@ -22,9 +22,9 @@ Programming Guide: http://researchkit.org/docs/docs/Overview/GuideOverview.html
 
  - Abby's Cycle: Menstrual cycle tracker  
   <details><summary><code>swift</code> </summary>
-
+  
   https://github.com/jc4p/abby-healthkit<br>  Added July 11, 2016<br>  License: `other`
-  <div><img height='300' alt='Abby's Cycle image 1' src='https://i.imgur.com/r45bo2R.png'> <img height='300' alt='Abby's Cycle image 2' src='https://i.imgur.com/fFDR1Fl.png'> 
+  <div><img height='300' alt='Abby's Cycle image 1' src='https://i.imgur.com/r45bo2R.png'> <img height='300' alt='Abby's Cycle image 2' src='https://i.imgur.com/fFDR1Fl.png'>
 </div>
   </details>
   
@@ -150,7 +150,7 @@ Programming Guide: http://researchkit.org/docs/docs/Overview/GuideOverview.html
 
 ### ResearchKit 
  
-https://www.apple.com/researchkit/ — [back to top](#readme) 
+[back to top](#readme) 
  
 - AlzPrevent: Clinical research platform for Alzheimer's disease [` App Store`](https://itunes.apple.com/app/alzprevent/id1065403320)  
   <details><summary><code>swift</code> </summary>
