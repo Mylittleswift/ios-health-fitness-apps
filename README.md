@@ -3,15 +3,10 @@
 ## Apple Healthkit: 
 Programming Guide (Swift): https://developer.apple.com/documentation/healthkit <br >
 Programming Guide (Objective-C): https://developer.apple.com/documentation/healthkit?language=objc
-## Apple Carekit
-Open-source project: https://github.com/carekit-apple/CareKit <br >
-Programming Guide: http://carekit.org/docs/docs/Overview/Overview.html 
-## Apple Researchkit:
-Open-source project: https://github.com/ResearchKit/ResearchKit <br >
-Programming Guide: http://researchkit.org/docs/docs/Overview/GuideOverview.html
 
 ## Most-Porpular Apps in App Store:
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
+
 Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-paid/iphone
 
 ## Open-source apps
