@@ -1,8 +1,12 @@
 <img src="https://github.com/Telerik-Verified-Plugins/HealthKit/blob/master/img/healthkit-hero_2x.png">
+<img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/9/4/2764915-1-eng-GB/Medidata-builds-open-source-connector-to-link-cloud-with-Apple_wrbm_large.jpg">
 
 ## Apple Healthkit: 
 Programming Guide (Swift): https://developer.apple.com/documentation/healthkit <br >
 Programming Guide (Objective-C): https://developer.apple.com/documentation/healthkit?language=objc
+
+## Apple ResearchKit: 
+https://github.com/ResearchKit
 
 ## Most-Porpular Apps in App Store:
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
