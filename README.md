@@ -1,20 +1,21 @@
 <img src="https://github.com/Telerik-Verified-Plugins/HealthKit/blob/master/img/healthkit-hero_2x.png" width = "120"> <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/9/4/2764915-1-eng-GB/Medidata-builds-open-source-connector-to-link-cloud-with-Apple_wrbm_large.jpg" width = "180">
 
-## Apple Healthkit: 
-Programming Guide (Swift): https://developer.apple.com/documentation/healthkit <br >
-Programming Guide (Objective-C): https://developer.apple.com/documentation/healthkit?language=objc
+## [Apple Healthkit](https://developer.apple.com/documentation/healthkit)
+
 ### sample apps:
 - [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/library/archive/samplecode/SpeedySloth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017338)
 - [LoopHealth: Using health documents and Activity rings in HealthKit and HealthKitUI](https://developer.apple.com/library/content/samplecode/LoopHealth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017553)
 - [Activity Rings: Contributing to Activity Rings on Apple Watch](https://developer.apple.com/library/content/samplecode/ActivityRings/Introduction/Intro.html#//apple_ref/doc/uid/TP40016623)
 
-## Apple ResearchKit: 
-https://github.com/ResearchKit
+## [Apple ResearchKit](https://github.com/ResearchKit/ResearchKit)
+### [Programming Guide](http://researchkit.org/docs/docs/Overview/GuideOverview.html)
+### sample apps:
+- [SageResearch](https://github.com/ResearchKit/SageResearch)
+- [more](https://github.com/ResearchKit)
 
-## Apple CareKit: 
-https://github.com/carekit-apple/CareKit
+## [Apple CareKit](https://github.com/carekit-apple/CareKit)
 
-## Most-Porpular Apps in App Store (Rankings):
+## Most-Porpular Health Apps in App Store (Rankings):
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
 
 Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-paid/iphone
