@@ -3,6 +3,10 @@
 ## Apple Healthkit: 
 Programming Guide (Swift): https://developer.apple.com/documentation/healthkit <br >
 Programming Guide (Objective-C): https://developer.apple.com/documentation/healthkit?language=objc
+### sample apps:
+- [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/library/archive/samplecode/SpeedySloth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017338)
+- [LoopHealth: Using health documents and Activity rings in HealthKit and HealthKitUI](https://developer.apple.com/library/content/samplecode/LoopHealth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017553)
+- [Activity Rings: Contributing to Activity Rings on Apple Watch](https://developer.apple.com/library/content/samplecode/ActivityRings/Introduction/Intro.html#//apple_ref/doc/uid/TP40016623)
 
 ## Apple ResearchKit: 
 https://github.com/ResearchKit
