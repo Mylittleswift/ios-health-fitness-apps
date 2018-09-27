@@ -1,4 +1,4 @@
-<img src="https://github.com/Telerik-Verified-Plugins/HealthKit/blob/master/img/healthkit-hero_2x.png" width = "100"> <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/9/4/2764915-1-eng-GB/Medidata-builds-open-source-connector-to-link-cloud-with-Apple_wrbm_large.jpg" width = "180">
+<img src="https://github.com/Telerik-Verified-Plugins/HealthKit/blob/master/img/healthkit-hero_2x.png" width = "80"> <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/9/4/2764915-1-eng-GB/Medidata-builds-open-source-connector-to-link-cloud-with-Apple_wrbm_large.jpg" width = "100">
 
 ## [Apple Healthkit](https://developer.apple.com/documentation/healthkit)
 
