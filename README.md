@@ -17,7 +17,7 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 
 ## [Apple CareKit](https://github.com/carekit-apple/CareKit)
 
-## FDA Requirement for Medical Devices and Apps
+## FDA Regulatory
 ### [Software as a Medical Device (SaMD)](https://www.fda.gov/MedicalDevices/DigitalHealth/SoftwareasaMedicalDevice/default.htm)
 ### [Mobile Medical Applications](https://www.fda.gov/MedicalDevices/DigitalHealth/MobileMedicalApplications/default.htm)
 
