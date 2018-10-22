@@ -21,6 +21,12 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 #### [Software as a Medical Device (SaMD)](https://www.fda.gov/MedicalDevices/DigitalHealth/SoftwareasaMedicalDevice/default.htm)
 #### [Mobile Medical Applications](https://www.fda.gov/MedicalDevices/DigitalHealth/MobileMedicalApplications/default.htm)
 
+
+## Connecting to Bluetooth Low Energy (BLE) Devices 
+1. https://github.com/Mylittleswift/BabyBluetooth
+2. https://github.com/Mylittleswift/BluetoothKit
+3. https://github.com/Mylittleswift/IOS-nRF-Toolbox_Swift
+
 ## Most-Porpular Health Apps in App Store (Rankings):
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
 
