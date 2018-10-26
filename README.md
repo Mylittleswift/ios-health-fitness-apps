@@ -231,53 +231,6 @@ Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fit
  
 [back to top](#readme) 
  
-- 420! Alarm [` App Store`](https://itunes.apple.com/app/420/id1194325430)  
-  <details><summary><code>swift</code> </summary>
-
-  https://github.com/efremidze/Alarm<br>  Added April 11, 2017<br>  License: [`apache-2.0`](http://choosealicense.com/licenses/apache-2.0/)
-  <div><img height='300' alt='420! Alarm image 1' src='https://raw.githubusercontent.com/efremidze/Alarm/master/screenshots/en-US/iPhone7-0-d41d8cd98f00b204e9800998ecf8427e.png'> 
-</div>
-  </details>
-
-- BaiduFM: A Baidu Music app  
-  <details><summary><code>swift</code> 🇨🇳 🔥🔥🔥</summary>
-
-  https://github.com/belm/BaiduFM-Swift<br>  Added August  6, 2015<br>  License: `other`
-  <div><img height='300' alt='BaiduFM image 1' src='https://github.com/belm/BaiduFM-Swift/raw/master/ScreenShot/BaiduFM-Swift_AppleWatch_00.png?raw=true'> 
-</div>
-  </details>
-
-- Bither: Simple & secure Bitcoin wallet  
-  <details><summary><code>objc</code> 🔥</summary>
-
-  https://github.com/bither/bither-ios<br>  Added April  3, 2015<br>  License: [`apache-2.0`](http://choosealicense.com/licenses/apache-2.0/)
-  <div><img height='300' alt='Bither image 1' src='http://a1.mzstatic.com/us/r30/Purple7/v4/f9/f8/d4/f9f8d401-2a9a-fb50-fe24-76a1158600b2/screen696x696.jpeg'> 
-</div>
-  </details>
-
-- Bus Today: Track bus line on your wrist, includes Today Extension [` App Store`](https://itunes.apple.com/app/jin-ri-gong-jiao-tong-zhi/id975022341)  
-  <details><summary><code>objc</code> 🇨🇳 </summary>
-
-  https://github.com/JohnWong/bus-today<br>  Added February 17, 2016<br>  License: `other`
-  <div><img height='300' alt='Bus Today image 1' src='http://a4.mzstatic.com/us/r30/Purple69/v4/94/5e/05/945e0506-9e18-749a-1ed9-e018949bfbad/screen696x696.jpeg'> <img height='300' alt='Bus Today image 2' src='http://a1.mzstatic.com/us/r30/Purple69/v4/8f/6c/74/8f6c7422-fdc8-89e4-3514-0ea044e7fd50/screen696x696.jpeg'> <img height='300' alt='Bus Today image 3' src='http://a4.mzstatic.com/us/r30/Purple69/v4/39/03/e1/3903e1cf-d614-5d26-e3b1-3f9180aa162e/screen696x696.jpeg'> <img height='300' alt='Bus Today image 4' src='http://a5.mzstatic.com/us/r30/Purple69/v4/7b/9a/d2/7b9ad2f6-0438-c850-f8e0-268b712873a0/screen696x696.jpeg'> <img height='300' alt='Bus Today image 5' src='http://a2.mzstatic.com/us/r30/Purple69/v4/ce/6f/fc/ce6ffc7a-7f95-0c08-f05b-77f15612d0c7/screen696x696.jpeg'> 
-</div>
-  </details>
-
-- Calculator by BalestraPatrick  
-  <details><summary><code>objc</code> 🔥</summary>
-
-  https://github.com/BalestraPatrick/AppleWatchCalculator<br>  Added March 24, 2017<br>  License: `other`
-  <div><img height='300' alt='Calculator by BalestraPatrick image 1' src='https://github.com/BalestraPatrick/AppleWatchCalculator/blob/master/Screenshot1.png?raw=true'> 
-</div>
-  </details>
-
-- Calculator by mukeshthawani  
-  <details><summary><code>swift</code> </summary>
-
-  https://github.com/mukeshthawani/Calculator<br>  Added December 18, 2015<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='Calculator by mukeshthawani image 1' src='https://raw.githubusercontent.com/mukeshthawani/Calculator/master/graphics/scr1.png'> 
-</div>
-  </details>
 
 - Cortado: Track your caffeine consumption habits [` App Store`](https://itunes.apple.com/app/cortado/id969899327)  
   <details><summary><code>objc</code> 🔥</summary>
@@ -287,37 +240,8 @@ Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fit
 </div>
   </details>
 
-- Count It: Dead simple way to you count anything  
-  <details><summary><code>swift</code> </summary>
 
-  https://github.com/PiXeL16/CountItApp<br>  Added July 11, 2016<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='Count It image 1' src='http://a4.mzstatic.com/us/r30/Purple49/v4/d9/07/8b/d9078bba-fcf6-8de1-c674-d69b895f17c6/screen696x696.jpeg'> <img height='300' alt='Count It image 2' src='http://a3.mzstatic.com/us/r30/Purple49/v4/85/9b/94/859b94ea-b37e-6f77-fe7b-afc9f76934e7/screen696x696.jpeg'> <img height='300' alt='Count It image 3' src='http://a5.mzstatic.com/us/r30/Purple49/v4/19/de/08/19de08b9-4688-556e-c544-bfcc2d8154fb/screen696x696.jpeg'> <img height='300' alt='Count It image 4' src='http://a1.mzstatic.com/us/r30/Purple49/v4/83/71/1c/83711c7a-0119-cc7f-5f86-9e1da4d210c6/screen696x696.jpeg'> 
-</div>
-  </details>
 
-- Done: To-do list data sharing between extension & main app  
-  <details><summary><code>swift</code> <code>realm</code> <code>watchkit</code> 🔥</summary>
-
-  https://github.com/FancyPixel/done-swift<br>  Added May  1, 2015<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='Done image 1' src='https://raw.githubusercontent.com/FancyPixel/done-swift/master/assets/screenshot.gif'> 
-</div>
-  </details>
-
-- Giovanni: Gameboy emulator for the Apple Watch  
-  <details><summary><code>swift</code> 🔥🔥🔥</summary>
-
-  https://github.com/gabrieloc/GIOVANNI<br>  Added March 20, 2017<br>  License: `other`
-  <div><img height='300' alt='Giovanni image 1' src='https://github.com/gabrieloc/GIOVANNI/blob/master/gameplay.gif?raw=true'> 
-</div>
-  </details>
-
-- GitHub Contributions: Track your GitHub contributions  
-  <details><summary><code>swift</code> </summary>
-
-  https://github.com/remirobert/Github-contributions<br>  Added April 20, 2017<br>  License: [`gpl-3.0`](http://choosealicense.com/licenses/gpl-3.0/)
-  <div><img height='300' alt='GitHub Contributions image 1' src='https://cloud.githubusercontent.com/assets/3276768/19214602/f39af4c0-8d87-11e6-8b3d-3d9c7b94d57c.png'> 
-</div>
-  </details>
 
 - Gulps: Track your daily water consumption [` App Store`](https://itunes.apple.com/app/gulps/id979057304)  
   <details><summary><code>swift</code> 🔥🔥🔥</summary>
@@ -343,21 +267,6 @@ Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fit
 </div>
   </details>
 
-- HN Reader: Hacker News Reader [` App Store`](https://itunes.apple.com/app/hn-reader-hacker-news-reader/id919243741)  
-  <details><summary><code>swift</code> 🔥🔥🔥🔥</summary>
-
-  https://github.com/Dimillian/SwiftHN<br>  Added January 26, 2015<br>  License: [`gpl-2.0`](http://choosealicense.com/licenses/gpl-2.0/)
-  <div><img height='300' alt='HN Reader image 1' src='https://cdn-images-1.medium.com/max/800/1*6Bey3OUZ2Xhuk-ZXCB-gOg.png'> 
-</div>
-  </details>
-
-- KTPomodoro: Mini Pomodoro Timer  
-  <details><summary><code>objc</code> </summary>
-
-  https://github.com/kenshin03/KTPomodoro<br>  Added February 26, 2015<br>  License: `other`
-  <div><img height='300' alt='KTPomodoro image 1' src='https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_1.png'> 
-</div>
-  </details>
 
 - MyWeight History: Body mass tracker with easy data input & access to history [` App Store`](https://itunes.apple.com/app/myweight-history/id1098061879)  
   <details><summary><code>swift</code> </summary>
@@ -367,53 +276,6 @@ Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fit
 </div>
   </details>
 
-- Natural Language Clock: Display the time as you would speak it  
-  <details><summary><code>swift</code> <code>watchos2</code> </summary>
-
-  https://github.com/chadkeck/Natural-Language-Clock<br>  Added April 20, 2016<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='Natural Language Clock image 1' src='https://github.com/chadkeck/Natural-Language-Clock/raw/master/assets/iPhone-and-Apple-Watch.png?raw=true'> 
-</div>
-  </details>
-
-- Parties for WWDC  
-  <details><summary><code>swift</code> <code>cloudkit</code> 🔥🔥</summary>
-
-  https://github.com/genadyo/WWDC<br>  Added January 26, 2015<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='Parties for WWDC image 1' src='http://a3.mzstatic.com/us/r30/Purple20/v4/5f/9e/6a/5f9e6a9a-db21-1e8a-c45a-aef6ba65956b/screen696x696.jpeg'> <img height='300' alt='Parties for WWDC image 2' src='http://a3.mzstatic.com/us/r30/Purple30/v4/7e/6f/12/7e6f12a7-8d4b-0416-4d7a-f4745a2d7538/screen696x696.jpeg'> <img height='300' alt='Parties for WWDC image 3' src='http://a3.mzstatic.com/us/r30/Purple60/v4/4c/0f/cf/4c0fcf21-8713-0d61-c0df-0dafdbe525e8/screen696x696.jpeg'> <img height='300' alt='Parties for WWDC image 4' src='http://a5.mzstatic.com/us/r30/Purple30/v4/c0/21/e4/c021e48b-fa87-a873-1c8b-95e58aba71e7/screen696x696.jpeg'> <img height='300' alt='Parties for WWDC image 5' src='http://a3.mzstatic.com/us/r30/Purple18/v4/e0/69/9c/e0699c09-6cb4-c1a5-4fa1-9cd7117eaa86/screen696x696.jpeg'> 
-</div>
-  </details>
-
-- PhotoWatch: Uses the SwiftyDropbox SDK  
-  <details><summary><code>swift</code> </summary>
-
-  https://github.com/dropbox/PhotoWatch<br>  Added February 25, 2016<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='PhotoWatch image 1' src='https://github.com/dropbox/PhotoWatch/raw/master/Screenshots/watch.png'> 
-</div>
-  </details>
-
-- try! Swift NYC  
-  <details><summary><code>swift</code> <code>toucan</code> <code>realm</code> 🔥</summary>
-
-  https://github.com/tryswift/trySwiftNYC<br>  Added November  8, 2016<br>  License: `other`
-  <div><img height='300' alt='try! Swift NYC image 1' src='https://i.imgur.com/xyu7t89.png'> <img height='300' alt='try! Swift NYC image 2' src='https://i.imgur.com/Jes7vLF.png'> 
-</div>
-  </details>
-
-- WatchKit-Apps: Tutorials app  
-  <details><summary><code>swift</code> 🔥🔥🔥🔥</summary>
-
-  https://github.com/kostiakoval/WatchKit-Apps<br>  Added March 23, 2015<br>  License: [`mit`](http://choosealicense.com/licenses/mit/)
-  <div><img height='300' alt='WatchKit-Apps image 1' src='https://raw.githubusercontent.com/kostiakoval/WatchKit-Apps/master/images/AppsInWatck/Counter.gif'> 
-</div>
-  </details>
-
-- WatchNote: Control your Keynote using Apple Watch  
-  <details><summary><code>swift</code> 🔥</summary>
-
-  https://github.com/ezefranca/WatchNote<br>  Added March 28, 2017<br>  License: [`apache-2.0`](http://choosealicense.com/licenses/apache-2.0/)
-  <div><img height='300' alt='WatchNote image 1' src='https://github.com/ezefranca/WatchNote/blob/master/print.png?raw=true'> 
-</div>
-  </details>
 
 - watchOS-2-Sampler: watchOS 2 new features example code  
   <details><summary><code>swift</code> <code>watchos2</code> 🔥🔥🔥🔥</summary>
@@ -423,10 +285,4 @@ Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fit
 </div>
   </details>
 
-- WatchPics: Instagram app  
-  <details><summary><code>objc</code> </summary>
 
-  https://github.com/D-32/WatchPics<br>  Added April 10, 2015<br>  License: [`apache-2.0`](http://choosealicense.com/licenses/apache-2.0/)
-  <div><img height='300' alt='WatchPics image 1' src='https://i.imgur.com/pEIRuzr.jpg'> 
-</div>
-  </details>
