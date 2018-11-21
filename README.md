@@ -4,7 +4,7 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 
 ## [Apple Healthkit](https://developer.apple.com/documentation/healthkit)
 
-### sample apps:
+### Apple's sample apps:
 - [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/library/archive/samplecode/SpeedySloth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017338)
 - [LoopHealth: Using health documents and Activity rings in HealthKit and HealthKitUI](https://developer.apple.com/library/content/samplecode/LoopHealth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017553)
 - [Activity Rings: Contributing to Activity Rings on Apple Watch](https://developer.apple.com/library/content/samplecode/ActivityRings/Introduction/Intro.html#//apple_ref/doc/uid/TP40016623)
