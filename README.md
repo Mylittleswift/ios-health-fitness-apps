@@ -27,10 +27,15 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 2. https://github.com/Mylittleswift/BluetoothKit
 3. https://github.com/Mylittleswift/IOS-nRF-Toolbox_Swift
 
-## Most-Porpular Health Apps in App Store (Rankings):
+## Most-Porpular Health & Fitness Apps in App Store (Rankings):
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
 
 Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-paid/iphone
+
+## Most-Porpular Medical Apps in App Store (Rankings):
+Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/medical/top-free/iphone
+
+Top paid: https://www.similarweb.com/apps/top/apple/store-rank/us/medical/top-paid/iphone
 
 ## Open-source apps
 
