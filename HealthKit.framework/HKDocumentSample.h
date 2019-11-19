@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKDocumentSample
  @abstract      An abstract class representing a health document.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(10_0, 3_0)
+HK_EXTERN API_AVAILABLE(ios(10.0), watchos(3.0))
 @interface HKDocumentSample : HKSample
 
 @property (readonly, strong) HKDocumentType *documentType;

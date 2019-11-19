@@ -2,7 +2,7 @@
 //  HKSample.h
 //  HealthKit
 //
-//  Copyright (c) 2014 Apple Inc. All rights reserved.
+//  Copyright (c) 2014-2018 Apple Inc. All rights reserved.
 //
 
 #import <HealthKit/HKObject.h>
@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKSample
  @abstract      An abstract class representing measurements taken over a period of time.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKSample : HKObject
 
-@property (readonly, strong) HKSampleType *sampleType;
+@property (readonly, copy) HKSampleType *sampleType;
 
 @property (readonly, strong) NSDate *startDate;
 @property (readonly, strong) NSDate *endDate;
@@ -26,11 +26,11 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 @end
 
 // Sort Identifiers
-HK_EXTERN NSString * const HKSampleSortIdentifierStartDate HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKSampleSortIdentifierEndDate HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+HK_EXTERN NSString * const HKSampleSortIdentifierStartDate API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKSampleSortIdentifierEndDate API_AVAILABLE(ios(8.0), watchos(2.0));
 
 // Predicate Key Paths
-HK_EXTERN NSString * const HKPredicateKeyPathStartDate HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathEndDate HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+HK_EXTERN NSString * const HKPredicateKeyPathStartDate API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathEndDate API_AVAILABLE(ios(8.0), watchos(2.0));
 
 NS_ASSUME_NONNULL_END

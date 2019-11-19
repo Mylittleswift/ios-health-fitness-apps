@@ -14,60 +14,60 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a device name.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyName HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyName API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyManufacturer
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a device manufacturer.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyManufacturer HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyManufacturer API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyModel
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a device model.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyModel HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyModel API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyHardwareVersion
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a hardware version.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyHardwareVersion HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyHardwareVersion API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyFirmwareVersion
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a firmware version.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyFirmwareVersion HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyFirmwareVersion API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeySoftwareVersion
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a software version.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeySoftwareVersion HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeySoftwareVersion API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyLocalIdentifier
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a local identifier.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyLocalIdentifier HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyLocalIdentifier API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @constant      HKDevicePropertyKeyUDIDeviceIdentifier
  @abstract      Used with predicateForObjectsWithDeviceProperty to specify a UDI device identifier.
  @discussion    The expected value type is an NSString.
  */
-HK_EXTERN NSString * const HKDevicePropertyKeyUDIDeviceIdentifier HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKDevicePropertyKeyUDIDeviceIdentifier API_AVAILABLE(ios(9.0), watchos(2.0));
 
 
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(9.0), watchos(2.0))
 @interface HKDevice : NSObject <NSSecureCoding, NSCopying>
 
 /*!

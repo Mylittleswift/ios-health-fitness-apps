@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <HealthKit/HKDefines.h>
+#import <HealthKit/HKFHIRResource.h>
 #import <HealthKit/HKWorkout.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class HKSampleType;
 @class HKSource;
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKQuery : NSObject
 
-@property (readonly, strong, nullable) HKObjectType *objectType HK_AVAILABLE_IOS_WATCHOS(9_3, 2_2);
-@property (readonly, strong, nullable) HKSampleType *sampleType NS_DEPRECATED_IOS(8_0, 9_3, "Use objectType") __WATCHOS_DEPRECATED(2.0, 2.2, "Use objectType");
+@property (readonly, strong, nullable) HKObjectType *objectType API_AVAILABLE(ios(9.3), watchos(2.2));
+@property (readonly, strong, nullable) HKSampleType *sampleType API_DEPRECATED_WITH_REPLACEMENT("objectType", ios(8.0, 9.3), watchos(2.0, 2.2));
 
 @property (readonly, strong, nullable) NSPredicate *predicate;
 
@@ -41,8 +42,7 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
     HKQueryOptionNone               = 0,
     HKQueryOptionStrictStartDate    = 1 << 0,
     HKQueryOptionStrictEndDate      = 1 << 1,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 @interface HKQuery (HKObjectPredicates)
 
@@ -103,7 +103,7 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  
  @param         sourceRevisions The list of source revisions.
  */
-+ (NSPredicate *)predicateForObjectsFromSourceRevisions:(NSSet<HKSourceRevision *> *)sourceRevisions HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
++ (NSPredicate *)predicateForObjectsFromSourceRevisions:(NSSet<HKSourceRevision *> *)sourceRevisions API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        predicateForObjectsFromDevices:
@@ -114,7 +114,7 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  
  @param         devices     The set of devices that generated data.
  */
-+ (NSPredicate *)predicateForObjectsFromDevices:(NSSet<HKDevice *> *)devices HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
++ (NSPredicate *)predicateForObjectsFromDevices:(NSSet<HKDevice *> *)devices API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        predicateForObjectsWithDeviceProperty:allowedValues:
@@ -127,7 +127,7 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  @param         allowedValues   The set of values for which the device property can match. An empty set will match all
                 devices whose property value is nil.
  */
-+ (NSPredicate *)predicateForObjectsWithDeviceProperty:(NSString *)key allowedValues:(NSSet<NSString *> *)allowedValues HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
++ (NSPredicate *)predicateForObjectsWithDeviceProperty:(NSString *)key allowedValues:(NSSet<NSString *> *)allowedValues API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        predicateForObjectWithUUID:
@@ -271,6 +271,18 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  */
 + (NSPredicate *)predicateForWorkoutsWithOperatorType:(NSPredicateOperatorType)operatorType totalSwimmingStrokeCount:(HKQuantity *)totalSwimmingStrokeCount;
 
+/*!
+ @method        predicateForWorkoutsWithOperatorType:totalFlightsClimbed:
+ @abstract      Creates a predicate for use with HKQuery subclasses.
+ @discussion    Creates a query predicate that matches HKWorkouts by the given operator type and totalFlightsClimbed
+ 
+ @param         operatorType                The operator type for the expression.
+ @param         totalFlightsClimbed         The value that the workout's totalFlightsClimbed is being compared to.
+                                            It is the right hand side of the expression. The unit for this value should
+                                            be of type Count.
+ */
++ (NSPredicate *)predicateForWorkoutsWithOperatorType:(NSPredicateOperatorType)operatorType totalFlightsClimbed:(HKQuantity *)totalFlightsClimbed API_AVAILABLE(ios(11.0), watchos(4.0));
+
 @end
 
 @interface HKQuery (HKActivitySummaryPredicates)
@@ -283,7 +295,7 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  @param         dateComponents  The date components of the activity summary. These date components should contain era, year, month,
                 and day components in the gregorian calendar.
  */
-+ (NSPredicate *)predicateForActivitySummaryWithDateComponents:(NSDateComponents *)dateComponents HK_AVAILABLE_IOS_WATCHOS(9_3, 2_2);
++ (NSPredicate *)predicateForActivitySummaryWithDateComponents:(NSDateComponents *)dateComponents API_AVAILABLE(ios(9.3), watchos(2.2));
 
 /*!
  @method        predicateForActivitySummariesBetweenStartDateComponents:endDateComponents:
@@ -296,7 +308,33 @@ typedef NS_OPTIONS(NSUInteger, HKQueryOptions) {
  @param         endDateComponents   The date components that define the end of the range. These date components should contain era, 
                 year, month, and day components in the gregorian calendar.
  */
-+ (NSPredicate *)predicateForActivitySummariesBetweenStartDateComponents:(NSDateComponents *)startDateComponents endDateComponents:(NSDateComponents *)endDateComponents HK_AVAILABLE_IOS_WATCHOS(9_3, 2_2);
++ (NSPredicate *)predicateForActivitySummariesBetweenStartDateComponents:(NSDateComponents *)startDateComponents endDateComponents:(NSDateComponents *)endDateComponents API_AVAILABLE(ios(9.3), watchos(2.2));
+
+@end
+
+@interface HKQuery (HKClinicalRecordPredicates)
+
+/*!
+ @method        predicateForClinicalRecordsWithFHIRResourceType:
+ @abstract      Creates a predicate for use with HKQuery subclasses.
+ @discussion    Creates a query predicate that matches HKClinicalRecords with a specific FHIR resource type.
+ 
+ @param         resourceType    The FHIR resource type.
+ */
++ (NSPredicate *)predicateForClinicalRecordsWithFHIRResourceType:(HKFHIRResourceType)resourceType API_AVAILABLE(ios(12.0)) __WATCHOS_PROHIBITED;
+
+/*!
+ @method        predicateForClinicalRecordsFromSource:withFHIRResourceType:identifier:
+ @abstract      Creates a predicate for use with HKQuery subclasses.
+ @discussion    Creates a query predicate that matches HKClinicalRecords for a given source, FHIR resource type, and FHIR identifier.
+ 
+ @param         source          The source.
+ @param         resourceType    The FHIR resource type.
+ @param         identifier      The FHIR identifier.
+ */
++ (NSPredicate *)predicateForClinicalRecordsFromSource:(HKSource *)source
+                                      FHIRResourceType:(HKFHIRResourceType)resourceType
+                                            identifier:(NSString *)identifier API_AVAILABLE(ios(12.0)) __WATCHOS_PROHIBITED;
 
 @end
 

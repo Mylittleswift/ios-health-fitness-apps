@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKQueryAnchor
  @discussion    This object encapsulates the state of an HKAnchoredObjectQuery
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(9.0), watchos(2.0))
 @interface HKQueryAnchor : NSObject <NSSecureCoding, NSCopying>
 
 /*!
@@ -35,7 +35,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
  @discussion    This query can be used by an application to find out about new or deleted samples in the HealthKit
                 database.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKAnchoredObjectQuery : HKQuery
 
 /*!
@@ -44,7 +44,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @discussion    This property may not be modified once the query has been executed.  It may only be set if the query has
                 no limit.
  */
-@property (nonatomic, copy, nullable) void(^updateHandler)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * _Nullable addedObjects, NSArray<HKDeletedObject *> * _Nullable deletedObjects, HKQueryAnchor * _Nullable newAnchor, NSError * _Nullable error) HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+@property (nonatomic, copy, nullable) void(^updateHandler)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * _Nullable addedObjects, NSArray<HKDeletedObject *> * _Nullable deletedObjects, HKQueryAnchor * _Nullable newAnchor, NSError * _Nullable error) API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        initWithType:predicate:anchor:limit:resultsHandler:
@@ -66,13 +66,13 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                    predicate:(nullable NSPredicate *)predicate
                       anchor:(nullable HKQueryAnchor *)anchor
                        limit:(NSUInteger)limit
-              resultsHandler:(void(^)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * _Nullable sampleObjects, NSArray<HKDeletedObject *> * _Nullable deletedObjects, HKQueryAnchor * _Nullable newAnchor, NSError * _Nullable error))handler HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+              resultsHandler:(void(^)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * _Nullable sampleObjects, NSArray<HKDeletedObject *> * _Nullable deletedObjects, HKQueryAnchor * _Nullable newAnchor, NSError * _Nullable error))handler API_AVAILABLE(ios(9.0), watchos(2.0));
 
 - (instancetype)initWithType:(HKSampleType *)type
                    predicate:(nullable NSPredicate *)predicate
                       anchor:(NSUInteger)anchor
                        limit:(NSUInteger)limit
-           completionHandler:(void(^)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * __nullable results, NSUInteger newAnchor, NSError * __nullable error))handler NS_DEPRECATED_IOS(8_0, 9_0, "Use initWithType:predicate:anchor:limit:resultsHandler:");
+           completionHandler:(void(^)(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> * __nullable results, NSUInteger newAnchor, NSError * __nullable error))handler API_DEPRECATED_WITH_REPLACEMENT("initWithType:predicate:anchor:limit:resultsHandler:", ios(8.0, 9.0));
 
 @end
 

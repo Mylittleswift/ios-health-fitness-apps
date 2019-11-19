@@ -2,11 +2,12 @@
 //  HKObjectType.h
 //  HealthKit
 //
-//  Copyright (c) 2013-2014 Apple Inc. All rights reserved.
+//  Copyright (c) 2013-2017 Apple Inc. All rights reserved.
 //
 
 #import <HealthKit/HKDefines.h>
 #import <HealthKit/HKTypeIdentifiers.h>
+#import <HealthKit/HKQuantityAggregationStyle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class HKCorrelationType;
 @class HKDocumentType;
 @class HKQuantityType;
+@class HKSeriesType;
 @class HKUnit;
 @class HKWorkoutType;
 
@@ -23,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKObjectType
  @abstract      An abstract class representing a type of object that can be stored by HealthKit.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKObjectType : NSObject <NSSecureCoding, NSCopying>
 
 /*!
@@ -39,9 +41,10 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 + (nullable HKCategoryType *)categoryTypeForIdentifier:(HKCategoryTypeIdentifier)identifier;
 + (nullable HKCharacteristicType *)characteristicTypeForIdentifier:(HKCharacteristicTypeIdentifier)identifier;
 + (nullable HKCorrelationType *)correlationTypeForIdentifier:(HKCorrelationTypeIdentifier)identifier;
-+ (nullable HKDocumentType *)documentTypeForIdentifier:(HKDocumentTypeIdentifier)identifier HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
++ (nullable HKDocumentType *)documentTypeForIdentifier:(HKDocumentTypeIdentifier)identifier API_AVAILABLE(ios(10.0), watchos(3.0));
++ (nullable HKSeriesType *)seriesTypeForIdentifier:(NSString *)identifier API_AVAILABLE(ios(11.0), watchos(4.0));
 + (HKWorkoutType *)workoutType;
-+ (HKActivitySummaryType *)activitySummaryType HK_AVAILABLE_IOS_WATCHOS(9_3, 2_2);
++ (HKActivitySummaryType *)activitySummaryType API_AVAILABLE(ios(9.3), watchos(2.2));
 
 @end
 
@@ -49,7 +52,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class         HKCharacteristicType
  @abstract      Represents a type of object that describes a characteristic of the user (such as date of birth).
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKCharacteristicType : HKObjectType
 @end
 
@@ -57,7 +60,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class         HKSampleType
  @abstract      Represents a type of HKSample.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKSampleType : HKObjectType
 @end
 
@@ -65,7 +68,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class         HKCategoryType
  @abstract      Represent a type of HKCategorySample.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKCategoryType : HKSampleType
 @end
 
@@ -73,27 +76,15 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class         HKCorrelationType
  @abstract      Represents a type of HKCorrelation
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKCorrelationType : HKSampleType
 @end
-
-/*!
- @enum          HKQuantityAggregationStyle
- @discussion    Describes how quantities can be aggregated over time.
- 
- @constant      HKQuantityAggregationStyleCumulative    Samples may be summed over a time interval.
- @constant      HKQuantityAggregationStyleDiscrete      Samples may be averaged over a time interval.
- */
-typedef NS_ENUM(NSInteger, HKQuantityAggregationStyle) {
-    HKQuantityAggregationStyleCumulative = 0,
-    HKQuantityAggregationStyleDiscrete,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
 
 /*!
  @class         HKDocumentType
  @abstract      Represents a type of HKDocument.
  */
-HK_CLASS_AVAILABLE_IOS_ONLY(10_0)
+HK_EXTERN API_AVAILABLE(ios(10.0))
 @interface HKDocumentType : HKSampleType
 @end
 
@@ -101,7 +92,7 @@ HK_CLASS_AVAILABLE_IOS_ONLY(10_0)
  @class         HKQuantityType
  @abstract      Represents types of HKQuantitySamples.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKQuantityType : HKSampleType
 
 @property (readonly) HKQuantityAggregationStyle aggregationStyle;
@@ -116,18 +107,29 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 @end
 
 /*!
- @class         HKCategoryType
+ @class         HKWorkoutType
  @abstract      Represents a workout or exercise
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKWorkoutType : HKSampleType
+@end
+
+/*!
+ @class         HKSeriesType
+ @abstract      Represents a type of HKSeriesSample
+ */
+HK_EXTERN API_AVAILABLE(ios(11.0), watchos(4.0))
+@interface HKSeriesType : HKSampleType
+
++ (instancetype)workoutRouteType;
+
 @end
 
 /*!
  @class         HKActivitySummaryType
  @abstract      Represents an HKActivitySummary
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_3, 2_2)
+HK_EXTERN API_AVAILABLE(ios(9.3), watchos(2.2))
 @interface HKActivitySummaryType : HKObjectType
 @end
 

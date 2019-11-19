@@ -2,7 +2,7 @@
 //  HKQuantitySample.h
 //  HealthKit
 //
-//  Copyright (c) 2013-2014 Apple Inc. All rights reserved.
+//  Copyright (c) 2013-2018 Apple Inc. All rights reserved.
 //
 
 #import <HealthKit/HKSample.h>
@@ -16,11 +16,18 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKQuantitySample
  @abstract      An HKObject subclass representing a quantity measurement.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKQuantitySample : HKSample
 
-@property (readonly, strong) HKQuantityType *quantityType;
-@property (readonly, strong) HKQuantity *quantity;
+@property (readonly, copy) HKQuantityType *quantityType;
+@property (readonly, copy) HKQuantity *quantity;
+
+/*!
+ @property      count
+ @abstract      The number of individual values making up the receiver's quantity.
+ @discussion    Requests for the individual series quantities can be made using HKQuantitySeriesSampleQuery.
+ */
+@property (readonly, assign) NSInteger count API_AVAILABLE(ios(12.0), watchos(5.0));
 
 /*!
  @method        quantitySampleWithType:quantity:startDate:endDate:
@@ -61,11 +68,11 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                              startDate:(NSDate *)startDate
                                endDate:(NSDate *)endDate
                                 device:(nullable HKDevice *)device
-                              metadata:(nullable NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+                              metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(9.0), watchos(2.0));
 
 @end
 
 // Predicate Key Paths
-HK_EXTERN NSString * const HKPredicateKeyPathQuantity HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+HK_EXTERN NSString * const HKPredicateKeyPathQuantity API_AVAILABLE(ios(8.0), watchos(2.0));
 
 NS_ASSUME_NONNULL_END

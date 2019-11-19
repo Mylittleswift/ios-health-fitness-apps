@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^HKObserverQueryCompletionHandler)(void);
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKObserverQuery : HKQuery
 
 /*!

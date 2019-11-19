@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
                 accepts a predicate to filter HKCorrelations and a dictionary of predicates to filter the
                 correlated samples.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKCorrelationQuery : HKQuery
 
 @property (readonly, copy) HKCorrelationType *correlationType;

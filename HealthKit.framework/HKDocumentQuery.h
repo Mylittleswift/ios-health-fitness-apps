@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract      A concrete subclass of HKQuery that provides an interface to retrieve documents from the Health store.
  
  */
-HK_CLASS_AVAILABLE_IOS_ONLY(10_0)
+HK_EXTERN API_AVAILABLE(ios(10.0))
 @interface HKDocumentQuery : HKQuery
 
 /*!

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class HKSourceRevision;
 @class HKDevice;
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKObject : NSObject <NSSecureCoding>
 
 /*!
@@ -23,19 +23,19 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  */
 @property (readonly, strong) NSUUID *UUID;
 
-@property (readonly, strong) HKSource *source NS_DEPRECATED_IOS(8_0, 9_0, "Use sourceRevision");
+@property (readonly, strong) HKSource *source API_DEPRECATED_WITH_REPLACEMENT("sourceRevision", ios(8.0, 9.0));
 
 /*!
  @property      sourceRevision
  @abstract      Represents the revision of the source responsible for saving the receiver.
  */
-@property (readonly, strong) HKSourceRevision *sourceRevision HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+@property (readonly, strong) HKSourceRevision *sourceRevision API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @property      device
  @abstract      Represents the device that generated the data of the receiver.
  */
-@property (readonly, strong, nullable) HKDevice *device HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+@property (readonly, strong, nullable) HKDevice *device API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @property      metadata
@@ -50,12 +50,12 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 @end
 
 // Predicate Key Paths
-HK_EXTERN NSString * const HKPredicateKeyPathUUID HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathSource HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathMetadata HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathCorrelation HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathWorkout HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathDevice HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathSourceRevision HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+HK_EXTERN NSString * const HKPredicateKeyPathUUID API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathSource API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathMetadata API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathCorrelation API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkout API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathDevice API_AVAILABLE(ios(9.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathSourceRevision API_AVAILABLE(ios(9.0), watchos(2.0));
 
 NS_ASSUME_NONNULL_END

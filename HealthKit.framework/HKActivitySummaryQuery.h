@@ -7,12 +7,11 @@
 
 #import <HealthKit/HKQuery.h>
 
-@class HKQueryAnchor;
 @class HKActivitySummary;
 
 NS_ASSUME_NONNULL_BEGIN
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_3, 2_2)
+HK_EXTERN API_AVAILABLE(ios(9.3), watchos(2.2))
 @interface HKActivitySummaryQuery : HKQuery
 
 /**

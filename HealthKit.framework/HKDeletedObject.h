@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKDeletedObject
  @abstract      A class representing an HKObject that was deleted from the HealtKit database.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(9.0), watchos(2.0))
 @interface HKDeletedObject : NSObject <NSSecureCoding>
 
 /*!
@@ -21,6 +21,14 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
  @abstract      The unique identifier of the HKObject that was deleted from the HealthKit database.
  */
 @property (readonly, strong) NSUUID *UUID;
+
+/*!
+ @property      metadata
+ @abstract      Extra information describing properties of the receiver.
+ @discussion    Metadata retained from the deleted HKObject.
+                Available keys: HKMetadataKeySyncIdentifier, HKMetadataKeySyncVersion
+ */
+@property (readonly, copy, nullable) NSDictionary<NSString *, id> *metadata API_AVAILABLE(ios(11.0), watchos(4.0));
 
 - (instancetype)init NS_UNAVAILABLE;
 

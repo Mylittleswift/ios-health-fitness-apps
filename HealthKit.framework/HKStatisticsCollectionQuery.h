@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class HKStatistics;
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKStatisticsCollection : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -49,7 +49,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 
 @end
 
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKStatisticsCollectionQuery : HKQuery
 
 @property (readonly, strong) NSDate *anchorDate;

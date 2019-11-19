@@ -13,7 +13,7 @@
  @class     HKBiologicalSexObject
  @abstract  A wrapper object for HKBiologicalSex enumeration.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKBiologicalSexObject : NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) HKBiologicalSex biologicalSex;
@@ -24,7 +24,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class     HKBloodTypeObject
  @abstract  A wrapper object for HKBloodType enumeration.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKBloodTypeObject : NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) HKBloodType bloodType;
@@ -35,7 +35,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class     HKFitzpatrickSkinTypeObject
  @abstract  A wrapper object for HKFitzpatrickSkinType enumeration.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(9.0), watchos(2.0))
 @interface HKFitzpatrickSkinTypeObject : NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) HKFitzpatrickSkinType skinType;
@@ -46,7 +46,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(9_0, 2_0)
  @class     HKWheelchairUseObject
  @abstract  A wrapper object for HKWheelchairUse enumeration.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(10_0, 3_0)
+HK_EXTERN API_AVAILABLE(ios(10.0), watchos(3.0))
 @interface HKWheelchairUseObject : NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) HKWheelchairUse wheelchairUse;

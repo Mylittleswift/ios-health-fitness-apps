@@ -15,17 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define HK_EXTERN extern "C" __attribute__((visibility("default")))
 #endif
 
-#define HK_AVAILABLE_IOS_WATCHOS(_iOSIntro, _watchOSIntro)    NS_AVAILABLE_IOS(_iOSIntro) __WATCHOS_AVAILABLE(_watchOSIntro)
-#define HK_AVAILABLE_IOS_ONLY(_iOSIntro)    NS_AVAILABLE_IOS(_iOSIntro) __WATCHOS_UNAVAILABLE
-#define HK_AVAILABLE_WATCHOS_ONLY(_watchOSIntro)    __WATCHOS_AVAILABLE(_watchOSIntro) __IOS_UNAVAILABLE
-
-#define HK_CLASS_AVAILABLE_IOS_ONLY(_iOSIntro)    NS_CLASS_AVAILABLE_IOS(_iOSIntro) __WATCHOS_PROHIBITED
-#define HK_CLASS_AVAILABLE_WATCHOS_ONLY(_watchOSIntro)    HK_EXTERN HK_AVAILABLE_WATCHOS_ONLY(_watchOSIntro)
-#define HK_CLASS_AVAILABLE_IOS_WATCHOS(_iOSIntro, _watchOSIntro)    NS_CLASS_AVAILABLE_IOS(_iOSIntro) __WATCHOS_AVAILABLE(_watchOSIntro)
-
-#define HK_ENUM_AVAILABLE_IOS_WATCHOS(_iOSIntro, _watchOSIntro)    NS_ENUM_AVAILABLE_IOS(_iOSIntro) __WATCHOS_AVAILABLE(_watchOSIntro)
-
-HK_EXTERN NSString * const HKErrorDomain HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+HK_EXTERN NSString * const HKErrorDomain API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @enum      HKErrorCode
@@ -41,6 +31,8 @@ HK_EXTERN NSString * const HKErrorDomain HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
  @constant  HKErrorUserCanceled                 The user canceled the operation.
  @constant  HKErrorAnotherWorkoutSessionStarted Another workout session was started by this or another application.
  @constant  HKErrorUserExitedWorkoutSession     User exited the application while a workout session was running.
+ @constant  HKErrorRequiredAuthorizationDenied  The user has not granted the application authorization to access
+                                                required data types.
  */
 typedef NS_ENUM(NSInteger, HKErrorCode) {
     HKNoError = 0,
@@ -51,9 +43,10 @@ typedef NS_ENUM(NSInteger, HKErrorCode) {
     HKErrorAuthorizationNotDetermined,
     HKErrorDatabaseInaccessible,
     HKErrorUserCanceled,
-    HKErrorAnotherWorkoutSessionStarted HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0),
-    HKErrorUserExitedWorkoutSession     HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0),
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+    HKErrorAnotherWorkoutSessionStarted     API_AVAILABLE(ios(9.0), watchos(2.0)),
+    HKErrorUserExitedWorkoutSession         API_AVAILABLE(ios(9.0), watchos(2.0)),
+    HKErrorRequiredAuthorizationDenied      API_AVAILABLE(ios(12.0), watchos(5.0)),
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @enum      HKUpdateFrequency
@@ -63,7 +56,7 @@ typedef NS_ENUM(NSInteger, HKUpdateFrequency) {
     HKUpdateFrequencyHourly,
     HKUpdateFrequencyDaily,
     HKUpdateFrequencyWeekly,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @enum      HKAuthorizationStatus
@@ -79,7 +72,22 @@ typedef NS_ENUM(NSInteger, HKAuthorizationStatus) {
     HKAuthorizationStatusNotDetermined = 0,
     HKAuthorizationStatusSharingDenied,
     HKAuthorizationStatusSharingAuthorized,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+} API_AVAILABLE(ios(8.0), watchos(2.0));
+
+/*!
+ @enum      HKAuthorizationRequestStatus
+ @abstract  This enumerated type is used to indicate whether it is necessary to request authorization from the user.
+ 
+ @constant  HKAuthorizationRequestStatusUnknown         The authorization request status could not be determined because
+                                                        an error occurred.
+ @constant  HKAuthorizationRequestStatusShouldRequest   The application should request authorization from the user.
+ @constant  HKAuthorizationRequestStatusUnnecessary     Requesting authorization from the user is unnecessary.
+ */
+typedef NS_ENUM(NSInteger, HKAuthorizationRequestStatus) {
+    HKAuthorizationRequestStatusUnknown = 0,
+    HKAuthorizationRequestStatusShouldRequest,
+    HKAuthorizationRequestStatusUnnecessary,
+} API_AVAILABLE(ios(12.0), watchos(5.0));
 
 /*!
  @enum       HKBiologicalSex
@@ -89,8 +97,8 @@ typedef NS_ENUM(NSInteger, HKBiologicalSex) {
     HKBiologicalSexNotSet = 0,
     HKBiologicalSexFemale,
     HKBiologicalSexMale,
-    HKBiologicalSexOther HK_ENUM_AVAILABLE_IOS_WATCHOS(8_2, 2_0),
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+    HKBiologicalSexOther API_AVAILABLE(ios(8.2), watchos(2.0)),
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @enum       HKBloodType
@@ -106,7 +114,7 @@ typedef NS_ENUM(NSInteger, HKBloodType) {
     HKBloodTypeABNegative,
     HKBloodTypeOPositive,
     HKBloodTypeONegative,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @enum          HKCategoryValueSleepAnalysis
@@ -121,8 +129,8 @@ typedef NS_ENUM(NSInteger, HKBloodType) {
 typedef NS_ENUM(NSInteger, HKCategoryValueSleepAnalysis) {
     HKCategoryValueSleepAnalysisInBed,
     HKCategoryValueSleepAnalysisAsleep,
-    HKCategoryValueSleepAnalysisAwake HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+    HKCategoryValueSleepAnalysisAwake API_AVAILABLE(ios(10.0), watchos(3.0)),
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 
 /*!
@@ -137,7 +145,7 @@ typedef NS_ENUM(NSInteger, HKCategoryValueSleepAnalysis) {
 typedef NS_ENUM(NSInteger, HKCategoryValueAppleStandHour) {
     HKCategoryValueAppleStandHourStood = 0,
     HKCategoryValueAppleStandHourIdle,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @enum          HKFitzpatrickSkinType
@@ -160,7 +168,7 @@ typedef NS_ENUM(NSInteger, HKFitzpatrickSkinType) {
     HKFitzpatrickSkinTypeIV,
     HKFitzpatrickSkinTypeV,
     HKFitzpatrickSkinTypeVI,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @enum          HKWheelchairUse
@@ -173,7 +181,7 @@ typedef NS_ENUM(NSInteger, HKWheelchairUse) {
     HKWheelchairUseNotSet = 0,
     HKWheelchairUseNo,
     HKWheelchairUseYes,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+} API_AVAILABLE(ios(10.0), watchos(3.0));
 
 /*!
  @enum          HKCategoryValueCervicalMucusQuality
@@ -186,7 +194,7 @@ typedef NS_ENUM(NSInteger, HKCategoryValueCervicalMucusQuality) {
     HKCategoryValueCervicalMucusQualityCreamy,
     HKCategoryValueCervicalMucusQualityWatery,
     HKCategoryValueCervicalMucusQualityEggWhite,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @enum          HKCategoryValueOvulationTestResult
@@ -198,7 +206,7 @@ typedef NS_ENUM(NSInteger, HKCategoryValueOvulationTestResult) {
     HKCategoryValueOvulationTestResultNegative = 1,
     HKCategoryValueOvulationTestResultPositive,
     HKCategoryValueOvulationTestResultIndeterminate,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @enum          HKCategoryValueMenstrualFlow
@@ -208,8 +216,9 @@ typedef NS_ENUM(NSInteger, HKCategoryValueMenstrualFlow) {
     HKCategoryValueMenstrualFlowUnspecified = 1,
     HKCategoryValueMenstrualFlowLight,
     HKCategoryValueMenstrualFlowMedium,
-    HKCategoryValueMenstrualFlowHeavy
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+    HKCategoryValueMenstrualFlowHeavy,
+    HKCategoryValueMenstrualFlowNone API_AVAILABLE(ios(12.0), watchos(5.0)),
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @enum          HKCategoryValue
@@ -217,6 +226,6 @@ typedef NS_ENUM(NSInteger, HKCategoryValueMenstrualFlow) {
  */
 typedef NS_ENUM(NSInteger, HKCategoryValue) {
     HKCategoryValueNotApplicable = 0,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+} API_AVAILABLE(ios(9.0), watchos(2.0));
 
 NS_ASSUME_NONNULL_END

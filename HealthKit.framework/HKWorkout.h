@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, HKWorkoutActivityType) {
     HKWorkoutActivityTypeCurling,
     HKWorkoutActivityTypeCycling,
     HKWorkoutActivityTypeDance,
-    HKWorkoutActivityTypeDanceInspiredTraining NS_ENUM_DEPRECATED_IOS(8_0, 10_0, "Use HKWorkoutActivityTypeDance, HKWorkoutActivityTypeBarre, or HKWorkoutActivityTypePilates"), // This enum remains available to access older data.
+    HKWorkoutActivityTypeDanceInspiredTraining API_DEPRECATED("Use HKWorkoutActivityTypeDance, HKWorkoutActivityTypeBarre or HKWorkoutActivityTypePilates", ios(8.0, 10.0), watchos(2.0, 3.0)), // This enum remains available to access older data.
     HKWorkoutActivityTypeElliptical,
     HKWorkoutActivityTypeEquestrianSports, // Polo, Horse Racing, Horse Riding, etc.
     HKWorkoutActivityTypeFencing,
@@ -44,8 +44,8 @@ typedef NS_ENUM(NSUInteger, HKWorkoutActivityType) {
     HKWorkoutActivityTypeHunting,
     HKWorkoutActivityTypeLacrosse,
     HKWorkoutActivityTypeMartialArts,
-    HKWorkoutActivityTypeMindAndBody, // Tai chi, meditation, etc.
-    HKWorkoutActivityTypeMixedMetabolicCardioTraining, // Any mix of cardio-focused exercises
+    HKWorkoutActivityTypeMindAndBody, // Qigong, meditation, etc.
+    HKWorkoutActivityTypeMixedMetabolicCardioTraining API_DEPRECATED("Use HKWorkoutActivityTypeMixedCardio or HKWorkoutActivityTypeHighIntensityIntervalTraining", ios(8.0, 11.0), watchos(2.0, 4.0)), // This enum remains available to access older data.
     HKWorkoutActivityTypePaddleSports, // Canoeing, Kayaking, Outrigger, Stand Up Paddle Board, etc.
     HKWorkoutActivityTypePlay, // Dodge Ball, Hopscotch, Tetherball, Jungle Gym, etc.
     HKWorkoutActivityTypePreparationAndRecovery, // Foam rolling, stretching, etc.
@@ -74,46 +74,82 @@ typedef NS_ENUM(NSUInteger, HKWorkoutActivityType) {
     HKWorkoutActivityTypeWrestling,
     HKWorkoutActivityTypeYoga,
     
-    HKWorkoutActivityTypeBarre              HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),    // HKWorkoutActivityTypeDanceInspiredTraining
-    HKWorkoutActivityTypeCoreTraining       HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeCrossCountrySkiing HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeDownhillSkiing     HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeFlexibility        HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeHighIntensityIntervalTraining    HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeJumpRope           HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeKickboxing         HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypePilates            HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),    // HKWorkoutActivityTypeDanceInspiredTraining
-    HKWorkoutActivityTypeSnowboarding       HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeStairs             HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeStepTraining       HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeWheelchairWalkPace HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutActivityTypeWheelchairRunPace  HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
+    HKWorkoutActivityTypeBarre              API_AVAILABLE(ios(10.0), watchos(3.0)),    // HKWorkoutActivityTypeDanceInspiredTraining
+    HKWorkoutActivityTypeCoreTraining       API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeCrossCountrySkiing API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeDownhillSkiing     API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeFlexibility        API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeHighIntensityIntervalTraining    API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeJumpRope           API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeKickboxing         API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypePilates            API_AVAILABLE(ios(10.0), watchos(3.0)),    // HKWorkoutActivityTypeDanceInspiredTraining
+    HKWorkoutActivityTypeSnowboarding       API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeStairs             API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeStepTraining       API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeWheelchairWalkPace API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeWheelchairRunPace  API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutActivityTypeTaiChi             API_AVAILABLE(ios(11.0), watchos(4.0)),
+    HKWorkoutActivityTypeMixedCardio        API_AVAILABLE(ios(11.0), watchos(4.0)),    // HKWorkoutActivityTypeMixedMetabolicCardioTraining
+    HKWorkoutActivityTypeHandCycling        API_AVAILABLE(ios(11.0), watchos(4.0)),
     
     HKWorkoutActivityTypeOther = 3000,
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 typedef NS_ENUM(NSInteger, HKWorkoutEventType) {
     HKWorkoutEventTypePause = 1,
     HKWorkoutEventTypeResume,
-    HKWorkoutEventTypeLap           HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutEventTypeMarker        HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutEventTypeMotionPaused  HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-    HKWorkoutEventTypeMotionResumed HK_ENUM_AVAILABLE_IOS_WATCHOS(10_0, 3_0),
-} HK_ENUM_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
+    HKWorkoutEventTypeLap           API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutEventTypeMarker        API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutEventTypeMotionPaused  API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutEventTypeMotionResumed API_AVAILABLE(ios(10.0), watchos(3.0)),
+    HKWorkoutEventTypeSegment       API_AVAILABLE(ios(11.0), watchos(4.0)),
+    HKWorkoutEventTypePauseOrResumeRequest API_AVAILABLE(ios(11.0), watchos(4.0)),
+} API_AVAILABLE(ios(8.0), watchos(2.0));
 
 /*!
  @class         HKWorkoutEvent
- @abstract      Represents a particular event that occurred during a workout
+ @abstract      Represents a particular event that occurred during a workout.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKWorkoutEvent : NSObject <NSSecureCoding, NSCopying>
 
+/*!
+ @property      workoutEventType
+ @abstract      Represents the type of event that occurred during a workout.
+ */
 @property (readonly, assign) HKWorkoutEventType type;
-@property (readonly, copy) NSDate *date;
-@property (readonly, copy, nullable) NSDictionary<NSString *, id> *metadata HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
 
-+ (instancetype)workoutEventWithType:(HKWorkoutEventType)type date:(NSDate *)date;
-+ (instancetype)workoutEventWithType:(HKWorkoutEventType)type date:(NSDate *)date metadata:(NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+@property (readonly, copy) NSDate *date API_DEPRECATED_WITH_REPLACEMENT("dateInterval", ios(8.0, 11.0), watchos(2.0, 4.0));
+
+/*!
+ @property      dateInterval
+ @abstract      Date interval representing the time period for which the event is valid.
+ @discussion    Most event types only support date intervals with zero duration. Events of type HKWorkoutEventTypeLap
+                and HKWorkoutEventTypeSegment are currently the only events that support a nonzero duration.
+ */
+@property (readonly, copy) NSDateInterval *dateInterval API_AVAILABLE(ios(11.0), watchos(4.0));
+
+/*!
+ @property      metadata
+ @abstract      Extra information describing properties of the receiver.
+ @discussion    Keys must be NSString and values must be either NSString, NSNumber, NSDate, or
+                HKQuantity. See HKMetadata.h for potential metadata keys and values.
+ */
+@property (readonly, copy, nullable) NSDictionary<NSString *, id> *metadata API_AVAILABLE(ios(10.0), watchos(3.0));
+
++ (instancetype)workoutEventWithType:(HKWorkoutEventType)type date:(NSDate *)date API_DEPRECATED_WITH_REPLACEMENT("workoutEventWithType:dateInterval:metadata:", ios(8.0, 11.0), watchos(2.0, 4.0));
+
++ (instancetype)workoutEventWithType:(HKWorkoutEventType)type date:(NSDate *)date metadata:(NSDictionary<NSString *, id> *)metadata API_DEPRECATED_WITH_REPLACEMENT("workoutEventWithType:dateInterval:metadata:", ios(10.0, 11.0), watchos(3.0, 4.0));
+
+/*!
+ @method        workoutEventWithType:dateInterval:metadata:
+ @discussion    Creates an event with a date interval with or without a duration.
+ @param         type                    The type of event to create
+ @param         dateInterval            The dateInterval over which the event occurs
+ @param         metadata                Dictionary of metadata associated with the event, nullable
+ */
++ (instancetype)workoutEventWithType:(HKWorkoutEventType)type dateInterval:(NSDateInterval *)dateInterval metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(11.0), watchos(4.0));
+
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
@@ -122,7 +158,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @class         HKWorkout
  @abstract      An HKObject subclass representing a workout or activity
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKWorkout : HKSample
 
 /*!
@@ -144,7 +180,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
 /*!
  @property      duration
  @abstract      The length of time that a workout was recording
- @discussion    The duration is derived from the start an end date of the workout, and takes into account periods that the 
+ @discussion    The duration is derived from the start and end dates of the workout and takes into account periods that the
                 workout was paused. Periods that the workout was paused are based off of the workoutEvents property.
  */
 @property (readonly, assign) NSTimeInterval duration;
@@ -170,7 +206,15 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
  @discussion    This metric should represent the total count of swimming strokes accumulated during the course of the
                 workout. It should be a quantity with a unit representing count.
  */
-@property (readonly, strong, nullable) HKQuantity *totalSwimmingStrokeCount HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+@property (readonly, strong, nullable) HKQuantity *totalSwimmingStrokeCount API_AVAILABLE(ios(10.0), watchos(3.0));
+
+/*!
+ @property      totalFlightsClimbed
+ @abstract      The total count of flights climbed during a workout
+ @discussion    This metric should represent the total count of flights accumulated during the course of the
+ workout. It should be a quantity with a unit representing count.
+ */
+@property (readonly, strong, nullable) HKQuantity *totalFlightsClimbed API_AVAILABLE(ios(11.0), watchos(4.0));
 
 /*!
  @method        workoutWithActivityType:startDate:endDate:
@@ -225,7 +269,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                       totalEnergyBurned:(nullable HKQuantity *)totalEnergyBurned
                           totalDistance:(nullable HKQuantity *)totalDistance
                                  device:(nullable HKDevice *)device
-                               metadata:(nullable NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+                               metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        workoutWithActivityType:startDate:endDate:duration:totalEnergyBurned:totalDistance:metadata:
@@ -269,7 +313,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                       totalEnergyBurned:(nullable HKQuantity *)totalEnergyBurned
                           totalDistance:(nullable HKQuantity *)totalDistance
                                  device:(nullable HKDevice *)device
-                               metadata:(nullable NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+                               metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method        workoutWithActivityType:startDate:endDate:workoutEvents:totalEnergyBurned:totalDistance:totalSwimmingStrokeCount:device:metadata:
@@ -294,21 +338,50 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                           totalDistance:(nullable HKQuantity *)totalDistance
                totalSwimmingStrokeCount:(nullable HKQuantity *)totalSwimmingStrokeCount
                                  device:(nullable HKDevice *)device
-                               metadata:(nullable NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+                               metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(10.0), watchos(3.0));
+
+/*!
+ @method        workoutWithActivityType:startDate:endDate:workoutEvents:totalEnergyBurned:totalDistance:totalFlightsClimbed:device:metadata:
+ @discussion    If the optional total parameters are specified, matching samples that add up to the calculated total
+                quantities should be associated with this workout using addSamples:toWorkout:completion: in
+                HKHealthStore.
+ 
+ @param         workoutActivityType         The activity type of the workout
+ @param         startDate                   The point in time that the workout was started
+ @param         endDate                     The point in time that the workout was ended
+ @param         workoutEvents               An array of HKWorkoutEvents. The workout's duration is derived from these events. (Optional)
+ @param         totalEnergyBurned           The amount of energy that was burned during the workout. (Optional)
+ @param         totalDistance               The total distance that was traveled during the workout. (Optional)
+ @param         totalFlightsClimbed         The total count of flights climbed that was accumulated during the workout. (Optional)
+ @param         device                      The HKDevice associated with the workout. (Optional)
+ @param         metadata                    Metadata for the workout. (Optional)
+ */
++ (instancetype)workoutWithActivityType:(HKWorkoutActivityType)workoutActivityType
+                              startDate:(NSDate *)startDate
+                                endDate:(NSDate *)endDate
+                          workoutEvents:(nullable NSArray<HKWorkoutEvent *> *)workoutEvents
+                      totalEnergyBurned:(nullable HKQuantity *)totalEnergyBurned
+                          totalDistance:(nullable HKQuantity *)totalDistance
+                    totalFlightsClimbed:(nullable HKQuantity *)totalFlightsClimbed
+                                 device:(nullable HKDevice *)device
+                               metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(11.0), watchos(4.0));
 
 @end
 
 // Predicate Key Paths
-HK_EXTERN NSString * const HKPredicateKeyPathWorkoutDuration HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalDistance HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalEnergyBurned HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathWorkoutType HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalSwimmingStrokeCount HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutDuration API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalDistance API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalEnergyBurned API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutType API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalSwimmingStrokeCount API_AVAILABLE(ios(10.0), watchos(3.0));
+HK_EXTERN NSString * const HKPredicateKeyPathWorkoutTotalFlightsClimbed API_AVAILABLE(ios(11.0), watchos(4.0));
+
 
 // Sort Identifiers
-HK_EXTERN NSString * const HKWorkoutSortIdentifierDuration HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalDistance HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalEnergyBurned HK_AVAILABLE_IOS_WATCHOS(8_0, 2_0);
-HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalSwimmingStrokeCount HK_AVAILABLE_IOS_WATCHOS(10_0, 3_0);
+HK_EXTERN NSString * const HKWorkoutSortIdentifierDuration API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalDistance API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalEnergyBurned API_AVAILABLE(ios(8.0), watchos(2.0));
+HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalSwimmingStrokeCount API_AVAILABLE(ios(10.0), watchos(3.0));
+HK_EXTERN NSString * const HKWorkoutSortIdentifierTotalFlightsClimbed API_AVAILABLE(ios(11.0), watchos(4.0));
 
 NS_ASSUME_NONNULL_END

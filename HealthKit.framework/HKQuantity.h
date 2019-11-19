@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKQuantity
  @abstract      The HKQuantity class provides an encapsulation of a quantity value and the unit of measurement.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKQuantity : NSObject <NSSecureCoding, NSCopying>
 
 - (instancetype)init NS_UNAVAILABLE;

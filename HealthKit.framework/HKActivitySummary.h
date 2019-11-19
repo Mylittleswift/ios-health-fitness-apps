@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class         HKActivitySummary
  @abstract      An object that represents a summary of a user's activity for a given day.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(9_3, 2_2)
+HK_EXTERN API_AVAILABLE(ios(9.3), watchos(2.2))
 @interface HKActivitySummary : NSObject <NSSecureCoding, NSCopying>
 
 /**
@@ -72,7 +72,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(9_3, 2_2)
 @end
 
 // Predicate Key Paths
-HK_EXTERN NSString * const HKPredicateKeyPathDateComponents HK_AVAILABLE_IOS_WATCHOS(9_3, 2_2);
+HK_EXTERN NSString * const HKPredicateKeyPathDateComponents API_AVAILABLE(ios(9.3), watchos(2.2));
 
 NS_ASSUME_NONNULL_END
 

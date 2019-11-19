@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
                 For example, systolic and diastolic blood pressure readings are typically presented together so these
                 readings should be saved with a correlation of type blood pressure.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKCorrelation : HKSample
 
 @property (readonly) HKCorrelationType *correlationType;
@@ -68,7 +68,7 @@ HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
                             endDate:(NSDate *)endDate
                             objects:(NSSet<HKSample *> *)objects
                              device:(nullable HKDevice *)device
-                           metadata:(nullable NSDictionary<NSString *, id> *)metadata HK_AVAILABLE_IOS_WATCHOS(9_0, 2_0);
+                           metadata:(nullable NSDictionary<NSString *, id> *)metadata API_AVAILABLE(ios(9.0), watchos(2.0));
 
 /*!
  @method    objectsForType:

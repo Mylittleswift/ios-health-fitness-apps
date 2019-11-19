@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  @class     HKStatisticsQuery
  @abstract  Calculates statistics on quantity samples matching the given quantity type and predicate.
  */
-HK_CLASS_AVAILABLE_IOS_WATCHOS(8_0, 2_0)
+HK_EXTERN API_AVAILABLE(ios(8.0), watchos(2.0))
 @interface HKStatisticsQuery : HKQuery
 
 - (instancetype)initWithQuantityType:(HKQuantityType *)quantityType
