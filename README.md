@@ -2,9 +2,11 @@
 
 Here is the collaborative list of open-source apps and demos to use Apple's HealthKit, ResearchKit and CareKit. Feel free to contribute. Thanks!
 
-## [Apple Healthkit](https://developer.apple.com/documentation/healthkit)
+## [Apple HealthKit](https://developer.apple.com/documentation/healthkit)
+### [Apple HealthKit APIs](https://github.com/Mylittleswift/ios-health-fitness-apps/tree/master/HealthKit.framework)
 
 ### Apple's sample apps:
+- [Reading and Writing HealthKit Series Data](https://developer.apple.com/documentation/healthkit/samples/reading_and_writing_healthkit_series_data)(iOS 13.0+)
 - [Fit: Store and Retrieve HealthKit Data](https://developer.apple.com/library/archive/samplecode/Fit/Introduction/Intro.html#//apple_ref/doc/uid/TP40014583-Intro-DontLinkElementID_2)
 - [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/library/archive/samplecode/SpeedySloth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017338)
 - [LoopHealth: Using health documents and Activity rings in HealthKit and HealthKitUI](https://developer.apple.com/library/content/samplecode/LoopHealth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017553)
