@@ -8,9 +8,10 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 ### Apple's sample apps:
 - [Reading and Writing HealthKit Series Data](https://developer.apple.com/documentation/healthkit/samples/reading_and_writing_healthkit_series_data)(iOS 13.0+)
 - [Fit: Store and Retrieve HealthKit Data](https://developer.apple.com/library/archive/samplecode/Fit/Introduction/Intro.html#//apple_ref/doc/uid/TP40014583-Intro-DontLinkElementID_2)
-- [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/library/archive/samplecode/SpeedySloth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017338)
+- [SpeedySloth: Using HealthKit to build a workout app for Apple Watch](https://developer.apple.com/documentation/healthkit/workouts_and_activity_rings/speedysloth_creating_a_workout)
 - [LoopHealth: Using health documents and Activity rings in HealthKit and HealthKitUI](https://developer.apple.com/library/content/samplecode/LoopHealth/Introduction/Intro.html#//apple_ref/doc/uid/TP40017553)
 - [Activity Rings: Contributing to Activity Rings on Apple Watch](https://developer.apple.com/library/content/samplecode/ActivityRings/Introduction/Intro.html#//apple_ref/doc/uid/TP40016623)
+- [SwingWatch: Using Device Motion on the Watch](https://developer.apple.com/library/archive/samplecode/SwingWatch/Introduction/Intro.html)
 
 ## [Apple ResearchKit](https://github.com/ResearchKit/ResearchKit)
 ### [Programming Guide](http://researchkit.org/docs/docs/Overview/GuideOverview.html)
@@ -20,15 +21,18 @@ Here is the collaborative list of open-source apps and demos to use Apple's Heal
 
 ## [Apple CareKit](https://github.com/carekit-apple/CareKit)
 
-## FDA Regulatory
-#### [Software as a Medical Device (SaMD)](https://www.fda.gov/MedicalDevices/DigitalHealth/SoftwareasaMedicalDevice/default.htm)
-#### [Mobile Medical Applications](https://www.fda.gov/MedicalDevices/DigitalHealth/MobileMedicalApplications/default.htm)
-
+## FDA Regulatory on Mobile Medical Apps
+### [Mobile Medical Applications](https://www.fda.gov/MedicalDevices/DigitalHealth/MobileMedicalApplications/default.htm)
+### [Policy for Device Software Functions and Mobile Medical Applications](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/policy-device-software-functions-and-mobile-medical-applications)
+### [Examples of Device Software Functions the FDA Regulates](https://www.fda.gov/medical-devices/device-software-functions-including-mobile-medical-applications/examples-device-software-functions-fda-regulates)
 
 ## Connecting to Bluetooth Low Energy (BLE) Devices 
-1. https://github.com/Mylittleswift/BabyBluetooth
-2. https://github.com/Mylittleswift/BluetoothKit
-3. https://github.com/Mylittleswift/IOS-nRF-Toolbox_Swift
+1. [BabyBluetooth](https://github.com/Mylittleswift/BabyBluetooth)
+2. [BluetoothKit](https://github.com/Mylittleswift/BluetoothKit)
+3. [IOS-nRF-Toolbox_Swift](https://github.com/Mylittleswift/IOS-nRF-Toolbox_Swift)
+4. [bluejay](https://github.com/Mylittleswift/bluejay)
+5. [RxBluetoothKit](https://github.com/Polidea/RxBluetoothKit)
+6. [BlueCap](https://github.com/troystribling/BlueCap)
 
 ## Most-Porpular Health & Fitness Apps in App Store (Rankings):
 Top free: https://www.similarweb.com/apps/top/apple/store-rank/us/health-and-fitness/top-free/iphone
